@@ -8,6 +8,10 @@ Would you like to work on another machine but you forgot to push your changes? U
  2. Run `bash push.sh`. Respond to each prompt, if you want to push your current branch with `y` or `n` if you don't want to publish your changes. You can stop at every moment with `q`.
  3. (Optional) For ease of use, you can create alias, for example `alias push='bash /path/to/push.sh'`, then simply run `push` and forget about all the repositories you need to update.
  
+ ## Update
+ 
+ Run `git pull` in this repository. Files with repositories are listed in *.gitignore*, so they won't be overwritten.
+ 
  ## Contributions
  
  Contributions are very welcome. Check out roadmap for ideas.
