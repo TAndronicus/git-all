@@ -1,7 +1,12 @@
 #!/bin/bash
 
 declare -a location
-location+=("$HOME/Workspace/dotfiles/")
+repositories_file="repositories.txt"
+
+while IFS= read -r line
+do
+    location+=("$line")
+done < "$repositories_file"
 
 for ((i=0;i<${#location[@]};i++))
 do
@@ -20,11 +25,15 @@ do
         if [ ! -d "${location[$i]}" ]; then
             printf "Directory %s does not exist" "${location[$i]}"
         else
-            echo Pushing "${location[$i]}"
             cd "${location[$i]}" || exit
-            git push
-            cd - || exit
-            echo Pushed "${location[$i]}"
+            if [ -d .git ]; then
+                echo Pushing "${location[$i]}"
+                git push
+                cd - || exit
+                echo Pushed "${location[$i]}"
+            else
+                printf "Not a git repository: %s" "${location[$i]}"
+            fi
         fi
     elif [ "$ins" == 'n' ]
     then
