@@ -17,3 +17,4 @@ Would you like to work on another machine but you forgot to push your changes? U
   1. Silent mode - disable prompt for every repository to push.
   2. Possibility to pass environmental variables (`$HOME` etc) to *repositories.txt*.
   3. Prepare cool demo using for example [terminalizer](https://github.com/faressoft/terminalizer).
+  4. Equivalent script for `git pull` to keep repostories up-to-date.
