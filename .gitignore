@@ -1,3 +1,7 @@
+# User files
 common.txt
 pull.txt
 push.txt
+
+# Dev
+.idea
