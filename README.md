@@ -25,3 +25,7 @@ Gather all your repositories in one place and push/pull them with single command
   1. Silent mode - disable prompt for every repository to push.
   2. Possibility to pass environmental variables (`$HOME` etc) to repositories files.
   3. Prepare cool demo using for example [terminalizer](https://github.com/faressoft/terminalizer).
+  
+## License
+
+This repository is published under GNU GPL v3.0.
